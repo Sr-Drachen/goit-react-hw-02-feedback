@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import  FeedBack from './components/FeedBack';
-import  Statistics from './components/Statistics';
-import Notification from './components/Notification';
+import  FeedBack from './components/FeedBack/FeedBack';
+import  Statistics from './components/Statistics/Statistics';
+import Notification from './components/Norification/Notification';
 
 class App extends Component {
   state = {
