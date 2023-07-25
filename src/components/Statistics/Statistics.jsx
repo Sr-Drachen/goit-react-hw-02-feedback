@@ -23,21 +23,21 @@ class Statistics extends Component {
               <li className={style.statistics__item} key={shortid.generate()}>
                 <span
                   className={style.statistics__name}
-                  key={shortid.generate()}
+                  
                 >
                   {key}:{' '}
                 </span>
-                <span key={shortid.generate()}>{value}</span>
+                <span >{value}</span>
               </li>
             );
           })}
-          <li className={style.statistics__item} key={shortid.generate()}>
-            <span key={shortid.generate()}>Total: </span>
-            <span key={shortid.generate()}>{this.props.total}</span>
+          <li className={style.statistics__item} >
+            <span >Total: </span>
+            <span >{this.props.total}</span>
           </li>
-          <li className={style.statistics__item} key={shortid.generate()}>
-            <span key={shortid.generate()}>Positive feedback: </span>
-            <span key={shortid.generate()}>
+          <li className={style.statistics__item} >
+            <span >Positive feedback: </span>
+            <span >
               {this.props.positivePercentage}%
             </span>
           </li>

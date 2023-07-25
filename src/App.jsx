@@ -25,17 +25,6 @@ class App extends Component {
       return acc;
     });
   };
-  countZero = () => {
-    if (
-      this.state.good === 0 &&
-      this.state.neutral === 0 &&
-      this.state.bad === 0
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
   countPositiveFeedbackPercentage = () => {
     return Math.trunc((this.state.good / this.countTotalFeedback()) * 100);
   };
@@ -49,7 +38,7 @@ class App extends Component {
             options={btnNames}
             onLeaveFeedback={this.onLeaveFeedback}
           />
-          {this.countZero() ? (
+          {this.countTotalFeedback() === 0 ? (
             <Notification message="No feedback given" />
           ) : (
             <Statistics
